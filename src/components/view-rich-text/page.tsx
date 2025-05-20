@@ -11,10 +11,15 @@ import ServerComponent from './ServerComponent'
 const Page = ({ data }: { data: string }) => {
   const htmlData = data
   return (
-    <main className="w-full min-h-[200px] border-1 border-slate-200 mt-2 ">
+    <main className="">
       {htmlData}
-      <ClientComponent data={htmlData} />
-      <ServerComponent data={htmlData} />
+      <div className="w-full min-h-[200px] border-1 border-slate-200 mt-2 ">
+        <ClientComponent data={htmlData} />
+      </div>
+      <div className="w-full h-4" />
+      <div className="w-full min-h-[200px] border-1 border-slate-200 mt-2 ">
+        <ServerComponent data={htmlData} />
+      </div>
     </main>
   )
 }
